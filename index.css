@@ -1,0 +1,81 @@
+/* css file for stopwatch containing all elements */
+.stopwatch {
+  position: relative;
+  height: 60vh;
+  width: 50vw;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-image: linear-gradient(
+    to right,
+    rgb(222, 202, 162),
+    rgb(54, 70, 70)
+  );
+  border-radius: 5px;
+}
+/* css file containing timer and its value */
+.timer-container {
+  position: relative;
+  height: 265px;
+}
+/* circle containing timer value*/
+#timer-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* animation on click of Start button , animation on the circle containing timer value*/
+@keyframes circles {
+  /* on start there's contraction of circle via transform element */
+  0% {
+    border: 3px solid rgba(101, 119, 138, 0);
+    transform: scale(0.9);
+  }
+  /* on mid of animation circle expands to its maximum value*/
+  50% {
+    border: 10px solid rgba(68, 87, 106, 0.632);
+    transform: scale(1.15);
+  }
+  /* on the end of position it came back to its initial position */
+  100% {
+    border: 3px solid rgba(101, 119, 138, 0);
+    transform: scale(0.9);
+  }
+}
+
+/* value of the timer to be shown */
+#timer-value {
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  color: aliceblue;
+  top: 28%;
+  left: 42%;
+}
+/* css file for all the buttons  */
+
+.buttons button {
+  color: rgb(35, 49, 31);
+  background-color: rgb(255, 255, 255);
+  border: 0 !important; /*!important here overrules the bootstrapped value of the button's border*/
+  color: rgb(0,0,0 ) !important; /*!important here overrules the bootstrapped value of the button's color*/
+  font-size: 20px;
+}
+/*  css file for start button */
+#Start-btn {
+  position: absolute;
+  left: 10%;
+}
+/*  css file for Stop button */
+#Stop-btn {
+  position: absolute;
+  left: 45%;
+}
+/*  css file for Reset button */
+#Reset-btn {
+  position: absolute;
+  left: 80%;
+}
